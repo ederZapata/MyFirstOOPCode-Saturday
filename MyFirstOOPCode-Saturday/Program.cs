@@ -10,7 +10,7 @@ namespace MyFirstOOPCode_Saturday
             {
                 var dateObject = new Date(5, 4, 100);
                 Console.WriteLine("Ingresar el año");
-                Console.ReadLine(year);
+                
                 Console.WriteLine(dateObject.ToString());
             }
             catch(Exception ex) 
