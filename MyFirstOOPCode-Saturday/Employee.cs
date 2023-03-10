@@ -17,7 +17,7 @@ namespace MyFirstOOPCode_Saturday
     #endregion
 
     #region Methods
-    public abstract int GetValueToPay();
+    public abstract decimal GetValueToPay();
 
     public override string ToString() 
     {
