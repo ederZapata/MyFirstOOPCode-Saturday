@@ -86,16 +86,16 @@ namespace MyFirstOOPCode_Saturday
                 Console.WriteLine("");
 
                 Console.WriteLine("Type your ID:");
-                int id = Convert.ToInt32(Console.ReadLine());
+                 id = Convert.ToInt32(Console.ReadLine());
 
                 Console.WriteLine("Type your first name:");
-                string FirstName = Console.ReadLine();
+                 FirstName = Console.ReadLine();
 
                 Console.WriteLine("Type your last name:");
-                string LastName = Console.ReadLine();
+                LastName = Console.ReadLine();
 
                 Console.WriteLine("Are you active ?:");
-                bool IsActive = Convert.ToBoolean(Console.ReadLine());
+                IsActive = Convert.ToBoolean(Console.ReadLine());
 
                 Console.WriteLine("Type your number of hours:");
                 float Hours  = Convert.ToSingle(Console.ReadLine());
@@ -117,6 +117,51 @@ namespace MyFirstOOPCode_Saturday
                 Console.WriteLine(hourlyEmployee.ToString());
 
                 Console.WriteLine("");
+
+                Console.WriteLine("****************************");
+                Console.WriteLine("* BASE COMISSION EMPLOYEE *");
+                Console.WriteLine("***************************");
+
+                Console.WriteLine("");
+
+                Console.WriteLine("Type your ID:");
+                id = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Type your first name:");
+                FirstName = Console.ReadLine();
+
+                Console.WriteLine("Type your last name:");
+                LastName = Console.ReadLine();
+
+                Console.WriteLine("Are you active ?:");
+                IsActive = Convert.ToBoolean(Console.ReadLine());
+
+                Console.WriteLine("Type your comission in percentage:");
+                commissionPercentage = Convert.ToSingle(Console.ReadLine());
+                commissionPercentage = commissionPercentage / 100;
+
+                Console.WriteLine("Type your sales:");
+                sales = Convert.ToDecimal(Console.ReadLine());
+
+                Console.WriteLine("Type your salary base per hour:");
+                decimal baseSalary = Convert.ToDecimal(Console.ReadLine());                
+
+                Console.WriteLine("")
+
+                Employee baseComissionEmployee = new BaseComissionEmployee();
+                {
+                    Id = id,
+                    FirstName = FirstName,
+                    LastName = LastName,
+                    BirthDate = dateObjectBirthDate,
+                    HiringDate = dateObjectHiringDate,
+                    IsActive = IsActive,
+                    CommissionPercentage = commissionPercentage,
+                    Sales = sales,
+                    Base = baseSalary,
+                };
+
+                Console.WriteLine(baseComissionEmployee.ToString());
 
             }
             catch(Exception ex) 
