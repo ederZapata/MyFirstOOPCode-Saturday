@@ -22,7 +22,7 @@ namespace MyFirstOOPCode_Saturday
         {
             return $"{base.ToString()}\n\t " +
                 $"Comission Percentage....{ComissionPercentage:P2}\n\t" +
-                $"Sales..                .{ Sales:C2}" +
+                $"Sales..                .{Sales:C2}" +
                 $"Value To Pay            {GetValueToPay:C2}";
         }
 
