@@ -79,18 +79,44 @@ namespace MyFirstOOPCode_Saturday
 
                 Console.WriteLine("");
 
+                Console.WriteLine("**********************");
+                Console.WriteLine("* HOURLY EMPLOYEE *");
+                Console.WriteLine("**********************");
 
+                Console.WriteLine("");
 
+                Console.WriteLine("Type your ID:");
+                int id = Convert.ToInt32(Console.ReadLine());
 
+                Console.WriteLine("Type your first name:");
+                string FirstName = Console.ReadLine();
 
+                Console.WriteLine("Type your last name:");
+                string LastName = Console.ReadLine();
 
+                Console.WriteLine("Are you active ?:");
+                bool IsActive = Convert.ToBoolean(Console.ReadLine());
 
+                Console.WriteLine("Type your number of hours:");
+                float Hours  = Convert.ToSingle(Console.ReadLine());
 
+                Console.WriteLine("Are your value per hour:");
+                decimal HourValue = Convert.ToDecimal(Console.ReadLine());
 
+                Employee hourlyEmployee = new HourlyEmployee()
+                {
+                    Id = id,
+                    FirstName = FirstName,
+                    LastName = LastName,
+                    BirthDate = dateObjectBirthDate,
+                    HiringDate = dateObjectHiringDate,
+                    IsActive = IsActive,
+                    Hours = Hours,
+                };
 
+                Console.WriteLine(hourlyEmployee.ToString());
 
-
-
+                Console.WriteLine("");
 
             }
             catch(Exception ex) 

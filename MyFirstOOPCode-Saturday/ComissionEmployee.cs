@@ -26,10 +26,10 @@ namespace MyFirstOOPCode_Saturday
                 $"Value To Pay            {GetValueToPay:C2}";
         }
 
-        private float ConvertPercentage(double commissionPercentage) 
-        {
-            return commissionPercentage / 100;
-        }
+       // private float ConvertPercentage(double commissionPercentage) 
+       // {
+         //   return commissionPercentage / 100;
+        //}
         #endregion
 
 
