@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace MyFirstOOPCode_Saturday
 {
@@ -75,7 +77,7 @@ namespace MyFirstOOPCode_Saturday
                     Sales = sales,  
                 };
 
-                Console.WriteLine(comissionEmployee.ToString());
+                //Console.WriteLine(comissionEmployee.ToString());
 
                 Console.WriteLine("");
 
@@ -114,7 +116,7 @@ namespace MyFirstOOPCode_Saturday
                     Hours = Hours,
                 };
 
-                Console.WriteLine(hourlyEmployee.ToString());
+                //Console.WriteLine(hourlyEmployee.ToString());
 
                 Console.WriteLine("");
 
@@ -161,7 +163,46 @@ namespace MyFirstOOPCode_Saturday
                     Base = baseSalary,
                 };
 
-                Console.WriteLine(baseComissionEmployee.ToString());
+                //Console.WriteLine(baseComissionEmployee.ToString());
+                decimal payroll = 0;
+                //decimal payroll2 = 0;
+                List<string> names = new List<string>();
+
+                ICollection<Employee> employees = new List<Employee>()
+                {
+                    salaryEmployee,
+                    comissionEmployee,
+                    hourlyEmployee,
+                    baseComissionEmployee,
+                };
+
+                foreach (Employee employees in employees) 
+                {
+                    if (employees.IsActive == true) 
+                    {
+                        Console.WriteLine(employees);
+                        names.Add(employees.FirstName);
+                        payroll += employees.GetValuesToPay();
+                        Console.WriteLine("");
+                    }                      
+                }
+
+                foreach (string name in names) 
+                { 
+                    Console.WriteLine(name);
+                    Console.WriteLine("");
+                }
+
+                //Console.WriteLine($"Total Payroll      {payroll:C2}");
+                Console.WriteLine(String.Format("Total payrot     "payroll));
+
+                Console.WriteLine("");
+
+                Console.WriteLine("***********");
+                Console.WriteLine("* INVOICE *");
+                Console.WriteLine("***********");
+
+
 
             }
             catch(Exception ex) 

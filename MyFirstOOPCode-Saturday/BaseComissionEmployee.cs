@@ -13,7 +13,7 @@ namespace MyFirstOOPCode_Saturday
         #region Methods
         public  decimal GetValueToPay()
         {
-            return base.GetValueToPay();
+            return base.GetValueToPay() + Base;
         }
 
         public override string ToString() 
